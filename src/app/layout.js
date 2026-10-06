@@ -2,6 +2,7 @@ import { Geist } from 'next/font/google'
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import InteractionProvider from '@/context/InteractionProvider';
+import Footer from '@/components/Footer';
 
 const geist = Geist({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <main>
             {children}
           </main>
+          <Footer />
         </InteractionProvider>
       </body>
     </html>

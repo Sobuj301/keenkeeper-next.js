@@ -15,17 +15,16 @@ const Friends = async () => {
             {/* Friends Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {friends.map((friend) => (
-                    <Link key={friend.id} href={`/friends/${friend.id}`}>
-                        <div 
-                            className="flex flex-col items-center p-5 rounded-2xl border border-slate-800 transition-colors hover:border-slate-700 text-center"
-                        >
-                            {/* Avatar Container with fixed aspect ratio */}
+                    <Link key={friend.id} href={`/friends/${friend.id}`} className="block group">
+                        <div className="flex flex-col items-center p-5 rounded-2xl border border-slate-800 bg-slate-900/40 transition-all duration-200 hover:border-slate-700 hover:bg-slate-900 text-center">
+                            {/* Avatar Container */}
                             <div className="relative w-20 h-20 overflow-hidden rounded-full border border-slate-700/60 shadow-md">
                                 <Image
                                     src={friend.picture}
                                     alt={friend.name}
                                     fill
-                                    className="object-cover"
+                                    sizes="80px"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
 
@@ -50,7 +49,7 @@ const Friends = async () => {
                                 </span>
                             </div>
                         </div>
-                        </Link>
+                    </Link>
                 ))}
             </div>
         </div>
