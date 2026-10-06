@@ -4,7 +4,7 @@ KeenKeeper is a friendship management web application that helps users keep trac
 
 ## 🚀 Live Demo
 
-Coming soon
+[KeenKeeper Live Demo](https://keenkeeper-psi.vercel.app?utm_source=chatgpt.com)
 
 ## 🛠️ Technologies Used
 
