@@ -1,22 +1,5 @@
-const stars = [
-    {
-        title: "Total Friends",
-        count: 10
-    },
-    {
-        title: "On Track",
-        count: 3
-    },
-    {
-        title: "Need Attention",
-        count: 6
-    },
-    {
-        title: "Interactions This Month",
-        count: 12
-    }
-]
-const Stats = () => {
+
+const Stats = ({stars}) => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto px-4">
             {stars.map((star, index) => (
