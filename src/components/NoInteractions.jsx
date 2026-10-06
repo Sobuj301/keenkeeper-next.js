@@ -4,9 +4,9 @@ import React from 'react';
 
 const NoInteractions = () => {
     return (
-        <div className="flex flex-col items-center justify-center p-8 m-4 text-center bg-gray-900/60 border border-gray-800 rounded-2xl max-w-md mx-auto">
+        <div className="flex flex-col items-center justify-center p-8 m-4 text-center border border-gray-800 rounded-2xl max-w-md mx-auto">
             {/* Icon Container */}
-            <div className="p-4 mb-4 rounded-full bg-gray-800/80 border border-gray-700/60 text-amber-400">
+            <div className="p-4 mb-4 rounded-full border border-gray-700/60 text-amber-400">
                 <Clock className="w-8 h-8" />
             </div>
 
