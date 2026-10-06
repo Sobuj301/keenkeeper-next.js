@@ -1,20 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import friendsData from "@/../public/data/friends.json";
+
 
 const Friends = async () => {
-    const res = await fetch("http://localhost:3000/data/friends.json");
-    const friends = await res.json();
+    // const res = await fetch("http://localhost:3000/data/friends.json");
+    // const friends = await res.json();
 
     return (
         <div className="max-w-6xl mx-auto my-8 px-4">
             {/* Header */}
             <h3 className="text-xl font-bold text-white mb-6">
-                Your Friends: <span className="text-indigo-400">{friends.length}</span>
+                Your Friends: <span className="text-indigo-400">{friendsData.length}</span>
             </h3>
 
             {/* Friends Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                {friends.map((friend) => (
+                {friendsData.map((friend) => (
                     <Link key={friend.id} href={`/friends/${friend.id}`} className="block group">
                         <div className="flex flex-col items-center p-5 rounded-2xl border border-slate-800 bg-slate-900/40 transition-all duration-200 hover:border-slate-700 hover:bg-slate-900 text-center">
                             {/* Avatar Container */}
